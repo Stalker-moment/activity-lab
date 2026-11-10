@@ -1,0 +1,67 @@
+{
+  "test_scope": "KTH six classes only; idle and personal videos have no independent test",
+  "accuracy": 0.7098765432098766,
+  "macro_f1": 0.7072095432560888,
+  "classification_report": {
+    "boxing": {
+      "precision": 0.8666666666666667,
+      "recall": 0.9629629629629629,
+      "f1-score": 0.9122807017543859,
+      "support": 108.0
+    },
+    "handclapping": {
+      "precision": 0.845360824742268,
+      "recall": 0.7592592592592593,
+      "f1-score": 0.8,
+      "support": 108.0
+    },
+    "handwaving": {
+      "precision": 0.8846153846153846,
+      "recall": 0.8518518518518519,
+      "f1-score": 0.8679245283018868,
+      "support": 108.0
+    },
+    "jogging": {
+      "precision": 0.48,
+      "recall": 0.5555555555555556,
+      "f1-score": 0.5150214592274678,
+      "support": 108.0
+    },
+    "running": {
+      "precision": 0.5703703703703704,
+      "recall": 0.7129629629629629,
+      "f1-score": 0.6337448559670782,
+      "support": 108.0
+    },
+    "walking": {
+      "precision": 0.6716417910447762,
+      "recall": 0.4166666666666667,
+      "f1-score": 0.5142857142857142,
+      "support": 108.0
+    },
+    "idle": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 0.0
+    },
+    "accuracy": 0.7098765432098766,
+    "macro avg": {
+      "precision": 0.6169507196342094,
+      "recall": 0.6084656084656085,
+      "f1-score": 0.6061796085052189,
+      "support": 648.0
+    },
+    "weighted avg": {
+      "precision": 0.7197758395732443,
+      "recall": 0.7098765432098766,
+      "f1-score": 0.7072095432560889,
+      "support": 648.0
+    }
+  },
+  "validation_losses": {
+    "ann": 0.5298101902008057,
+    "temporal": 0.5992881655693054
+  },
+  "selected_model": "ann"
+}

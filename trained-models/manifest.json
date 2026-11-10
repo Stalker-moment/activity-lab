@@ -1,0 +1,59 @@
+{
+  "artifacts": [
+    {
+      "file": "trained-models/baseline/activity_model.keras",
+      "bytes": 522342,
+      "sha256": "7eb0c89f302b4d1bb23add05aa22006331f29ca80af9851a2cf70a8a44ef7b28",
+      "origin": "outputs_local/activity_model.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/baseline/ann_best.keras",
+      "bytes": 522447,
+      "sha256": "ab2cd08356e73ac69ab94f5e34fe164d6c4d2ea3296f91a7bc5916a205c19a04",
+      "origin": "outputs_local/ann_best.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/baseline/lstm_best.keras",
+      "bytes": 4193226,
+      "sha256": "c074cbe8a01e9b992d1b7986d5890b527643960e5d7c16f0b0761c0e6e53ec7d",
+      "origin": "outputs_local/lstm_best.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/advanced/activity_model.keras",
+      "bytes": 2112821,
+      "sha256": "1c43acc2fa57907731f5a598bf12a9819e8f7211ecef9fe59be47a4f8549df07",
+      "origin": "outputs_advanced/activity_model.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/advanced/ann_best.keras",
+      "bytes": 2112996,
+      "sha256": "442db33ca6420b65e5c9f2e6683d38cb88ddf657d704f331d315f90442515ba0",
+      "origin": "outputs_advanced/ann_best.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/advanced/temporal_best.keras",
+      "bytes": 3586458,
+      "sha256": "29c1dfa6329e396b4c7519a5c94f85e11089749bfdaafef082a3cc4a1317d76d",
+      "origin": "outputs_advanced/temporal_best.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/yolo-gru-e03/best.keras",
+      "bytes": 2495352,
+      "sha256": "e3867b56d0d67fc3b9a42e2c1a1cf91b8a5514edf200730a3d8130dc8ea648f4",
+      "origin": "research/results/E03/seed_42/best.keras",
+      "type": "project-trained classifier"
+    },
+    {
+      "file": "trained-models/baseline/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_160_no_top.h5",
+      "bytes": 9406464,
+      "sha256": "1e9310d901d6e4346c8b4d89ad04267c3299ccf252dbe2641dd2b0eb048bf04e",
+      "type": "ImageNet pretrained backbone, not trained by project"
+    }
+  ]
+}

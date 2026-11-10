@@ -1,0 +1,26 @@
+[
+  {
+    "file": "face_landmarker.task",
+    "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+    "bytes": 3758596,
+    "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+  },
+  {
+    "file": "gesture_recognizer.task",
+    "url": "https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task",
+    "bytes": 8373440,
+    "sha256": "97952348cf6a6a4915c2ea1496b4b37ebabc50cbbf80571435643c455f2b0482"
+  },
+  {
+    "file": "yolo11n.pt",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt",
+    "bytes": 5613764,
+    "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+  },
+  {
+    "file": "yolo11n-pose.pt",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-pose.pt",
+    "bytes": 6255593,
+    "sha256": "869e83fcdffdc7371fa4e34cd8e51c838cc729571d1635e5141e3075e9319dc0"
+  }
+]

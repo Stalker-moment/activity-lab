@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "blank",
+      "status": 200,
+      "route": "none",
+      "label": "not_detected",
+      "latency_ms": 1201.2,
+      "candidates": 0,
+      "age": {
+        "active": false,
+        "available": false,
+        "detected": false,
+        "estimated_age": null,
+        "age_range": "\u2014",
+        "bracket": "Belum tersedia",
+        "confidence": null,
+        "status": "Model usia terlatih belum tersedia; tidak ada estimasi yang dibuat."
+      },
+      "fall": {
+        "active": true,
+        "alert": false,
+        "aspect_ratio": 0,
+        "downward_velocity": 0,
+        "fallen_duration": 0,
+        "status": "Tubuh tidak terdeteksi"
+      },
+      "drowsiness": {
+        "active": true,
+        "alert": false,
+        "eye_closure": 0,
+        "yawn_score": 0,
+        "closed_duration": 0,
+        "yawn_duration": 0,
+        "status": "Wajah tidak terdeteksi"
+      }
+    },
+    {
+      "name": "body-buffer",
+      "status": 200,
+      "route": "body",
+      "label": "waving_both",
+      "latency_ms": 438.2,
+      "candidates": 33,
+      "age": null,
+      "fall": null,
+      "drowsiness": null
+    },
+    {
+      "name": "ann-buffer",
+      "status": 200,
+      "route": null,
+      "label": "walking",
+      "latency_ms": 59.1,
+      "candidates": 6,
+      "age": null,
+      "fall": null,
+      "drowsiness": null
+    }
+  ],
+  "ann_hashes_unchanged": true,
+  "note": "Smoke tests, not an accuracy benchmark. Server latency excludes decode/queue/network."
+}

@@ -1,0 +1,65 @@
+{
+  "accuracy": 0.470679012345679,
+  "balanced_accuracy": 0.470679012345679,
+  "macro_f1": 0.48613973685606,
+  "coverage": 0.6388888888888888,
+  "classification_report": {
+    "boxing": {
+      "precision": 0.823076923076923,
+      "recall": 0.9907407407407407,
+      "f1-score": 0.8991596638655462,
+      "support": 108.0
+    },
+    "handclapping": {
+      "precision": 0.7522935779816514,
+      "recall": 0.7592592592592593,
+      "f1-score": 0.7557603686635944,
+      "support": 108.0
+    },
+    "handwaving": {
+      "precision": 0.7572815533980582,
+      "recall": 0.7222222222222222,
+      "f1-score": 0.7393364928909952,
+      "support": 108.0
+    },
+    "jogging": {
+      "precision": 0.5,
+      "recall": 0.21296296296296297,
+      "f1-score": 0.2987012987012987,
+      "support": 108.0
+    },
+    "running": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 108.0
+    },
+    "walking": {
+      "precision": 0.5769230769230769,
+      "recall": 0.1388888888888889,
+      "f1-score": 0.22388059701492538,
+      "support": 108.0
+    },
+    "micro avg": {
+      "precision": 0.7367149758454107,
+      "recall": 0.470679012345679,
+      "f1-score": 0.5743879472693032,
+      "support": 648.0
+    },
+    "macro avg": {
+      "precision": 0.5682625218966183,
+      "recall": 0.470679012345679,
+      "f1-score": 0.48613973685606,
+      "support": 648.0
+    },
+    "weighted avg": {
+      "precision": 0.5682625218966183,
+      "recall": 0.470679012345679,
+      "f1-score": 0.48613973685606,
+      "support": 648.0
+    }
+  },
+  "test_windows": 648,
+  "missing_detection_policy": "Coverage < 0.8 counted incorrect on all test windows; not silently dropped.",
+  "note": "Six-class KTH; not independent personal-camera or idle evaluation."
+}

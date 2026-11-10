@@ -1,0 +1,8 @@
+,boxing,handclapping,handwaving,jogging,running,walking,no_person
+boxing,107,0,1,0,0,0,0
+handclapping,6,82,20,0,0,0,0
+handwaving,4,26,78,0,0,0,0
+jogging,5,1,1,23,0,7,71
+running,2,0,0,7,0,4,95
+walking,6,0,3,16,0,15,68
+no_person,0,0,0,0,0,0,0

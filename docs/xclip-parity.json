@@ -1,0 +1,6 @@
+{
+  "device": "cuda",
+  "max_logit_error": 0.0,
+  "cache_entries": 1,
+  "passed": true
+}

@@ -1,0 +1,41 @@
+{
+  "name": "MobileNetV2",
+  "weights": "imagenet",
+  "image_size": 160,
+  "frames": 16,
+  "gray": true,
+  "resize": "letterbox",
+  "window_seconds": 2.0,
+  "dataset": "kth_plus_local_v2",
+  "motion": "farneback13",
+  "augment": "consistent_crop_flip_light_blur_v1",
+  "backend": "torch",
+  "keras": "3.15.1",
+  "torch": "2.11.0+cu128",
+  "classes": [
+    "boxing",
+    "handclapping",
+    "handwaving",
+    "jogging",
+    "running",
+    "walking",
+    "idle"
+  ],
+  "selected_model": "ann",
+  "seed": 42,
+  "predict_every_seconds": 0.5,
+  "reject_threshold": 0.6000000000000001,
+  "threshold_note": "Validation KTH only; fallback 0.7 if target is unavailable. Not a calibrated OOD detector.",
+  "feature_dim": 1293,
+  "audio": "removed",
+  "evaluation_unit": "two_second_window",
+  "class_weights": {
+    "0": 0.8528138528138528,
+    "1": 0.8794642857142857,
+    "2": 0.8528138528138528,
+    "3": 0.8794642857142857,
+    "4": 0.8528138528138528,
+    "5": 0.8528138528138528,
+    "6": 3.0
+  }
+}

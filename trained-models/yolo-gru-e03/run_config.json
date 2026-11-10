@@ -1,0 +1,44 @@
+{
+  "experiment": "E03",
+  "seed": 42,
+  "feature_config": {
+    "version": 1,
+    "frames": 16,
+    "window_seconds": 2.0,
+    "size": 160,
+    "gray": true,
+    "resize": "letterbox",
+    "detector": "yolo11n.pt",
+    "detector_conf": 0.25,
+    "detector_imgsz": 320,
+    "crop_margin": 0.1,
+    "minimum_detection_coverage": 0.8,
+    "representation": "roi",
+    "manifest_sha256": "bb6bdb6f5c34dd7d5a9206731f7b56b1f51620678b16fc4734090e4a17ac45a5",
+    "keras": "3.15.1",
+    "torch": "2.11.0+cu128",
+    "weights_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "ultralytics": "8.4.208"
+  },
+  "best_validation_macro_f1": 0.4924290384032857,
+  "best_validation_loss": 1.109960913658142,
+  "train_windows": 326,
+  "dropped_train_windows": 247,
+  "training_seconds": 6.466773200008902,
+  "selection": "validation macro F1; validation loss tie-break",
+  "classes": [
+    "boxing",
+    "handclapping",
+    "handwaving",
+    "jogging",
+    "running",
+    "walking"
+  ],
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "ultralytics": "8.4.208",
+    "keras": "3.15.1",
+    "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU"
+  }
+}

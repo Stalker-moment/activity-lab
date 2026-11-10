@@ -1,0 +1,101 @@
+{
+  "ann": {
+    "type": "trained classifier with pretrained backbone",
+    "source": "outputs_local/activity_model.keras",
+    "train_data": "KTH",
+    "backbone": "MobileNetV2 ImageNet"
+  },
+  "xclip": {
+    "type": "pretrained zero-shot; no local training",
+    "source": "https://huggingface.co/microsoft/xclip-base-patch16-zero-shot",
+    "revision": "6746d6a5202bf24300cd9bf36f457f174483d41b",
+    "license": "MIT according to model card",
+    "frames": 32
+  },
+  "assets": [
+    {
+      "model": "ann",
+      "file": "activity_model.keras",
+      "bytes": 522342,
+      "sha256": "7eb0c89f302b4d1bb23add05aa22006331f29ca80af9851a2cf70a8a44ef7b28"
+    },
+    {
+      "model": "ann",
+      "file": "mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_160_no_top.h5",
+      "bytes": 9406464,
+      "sha256": "1e9310d901d6e4346c8b4d89ad04267c3299ccf252dbe2641dd2b0eb048bf04e"
+    },
+    {
+      "model": "ann",
+      "file": "pipeline_config.json",
+      "bytes": 479,
+      "sha256": "45a06c802401c207aa534004e6f0e75f769c4d314c069cb4e5bf843cb075c37f"
+    },
+    {
+      "model": "ann",
+      "file": "provenance.json",
+      "bytes": 787,
+      "sha256": "393d818ff9dcd77e847f76654b17d64794c9116a235092394e5990832dfcd885"
+    },
+    {
+      "model": "ann",
+      "file": "test_metrics.json",
+      "bytes": 1596,
+      "sha256": "4c4bfdb33f7d8f2885a4b5689eb6af825d0ed4c4595706f9fe867e90e4fb66f8"
+    },
+    {
+      "model": "xclip",
+      "file": "config.json",
+      "bytes": 8899,
+      "sha256": "6416b40171bcf1dae39904aad1dea0ab24ada831661f8731b5cef3bfbd7d17d7"
+    },
+    {
+      "model": "xclip",
+      "file": "merges.txt",
+      "bytes": 524619,
+      "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a"
+    },
+    {
+      "model": "xclip",
+      "file": "model.safetensors",
+      "bytes": 779838804,
+      "sha256": "0057077dd2bb6a5852fc9150f6e08f866448f4928f0acd7b267007f22a6adaf7"
+    },
+    {
+      "model": "xclip",
+      "file": "preprocessor_config.json",
+      "bytes": 310,
+      "sha256": "3376c13ec67e5505734b3d5b61d51b7f753cb1896d9661171c25ad35afcb69b6"
+    },
+    {
+      "model": "xclip",
+      "file": "README.md",
+      "bytes": 3017,
+      "sha256": "d4aa9deca77e6eb675b84f14cd41d9e4879ba3c21baac35fb80d4864c0d25cb0"
+    },
+    {
+      "model": "xclip",
+      "file": "special_tokens_map.json",
+      "bytes": 472,
+      "sha256": "c4864a9376a8401918425bed71fc14fc0e81f9b59ec45c1cf96cccb2df508eac"
+    },
+    {
+      "model": "xclip",
+      "file": "tokenizer.json",
+      "bytes": 2224208,
+      "sha256": "f3dba9c5f2100fc09edb20622a18083f1fbf5041e4c0af371959bd7502428d44"
+    },
+    {
+      "model": "xclip",
+      "file": "tokenizer_config.json",
+      "bytes": 927,
+      "sha256": "1636bf45a35613aa5bc18520bca07d58550d3b272b6f8a12fc17363f52b2a930"
+    },
+    {
+      "model": "xclip",
+      "file": "vocab.json",
+      "bytes": 1059962,
+      "sha256": "e089ad92ba36837a0d31433e555c8f45fe601ab5c221d4f607ded32d9f7a4349"
+    }
+  ]
+}
