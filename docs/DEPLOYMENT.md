@@ -55,7 +55,27 @@ Untuk akses publik, pasang TLS dan gateway autentikasi (misalnya OAuth proxy) di
 
 ## Vercel
 
-Root frontend `web`, build `npm run build`. Tetapkan `NEXT_PUBLIC_INFERENCE_URL=https://vision-api.example.com`, lalu deploy. Backend tetap berjalan pada server Python/GPU; tidak dipindah ke fungsi Vercel. Tambahkan origin Vercel yang tepat ke `ALLOWED_ORIGINS`. Jangan menggunakan localhost pada build frontend publik: localhost menunjuk perangkat pengunjung. Backend HTTP juga akan diblokir mixed content bila frontend HTTPS.
+Root Directory Vercel: **`web`**, Framework Preset: **Next.js**. File `web/vercel.json` sudah menetapkan build `npm run build` dan install `npm ci`.
+
+Environment frontend sudah diisi di `web/.env.production` (ikut Git; hanya URL publik):
+
+```env
+NEXT_PUBLIC_INFERENCE_URL=https://activity-lab-api.tierkun.my.id
+```
+
+`web/.env.local` memakai URL yang sama untuk uji lokal, tetapi tetap ignored. Di dashboard Vercel, tambahkan variabel tersebut pada Production dan Preview jika ingin mengatur URL tanpa mengedit repository; nilai dashboard mengalahkan file. Setelah mengubah URL, redeploy karena NEXT_PUBLIC di-inline saat build.
+
+Domain frontend yang disiapkan: **https://activity-lab.tierkun.com**. Tambahkan domain tersebut pada Settings → Domains di Vercel dan ikuti record DNS yang ditampilkan Vercel.
+
+Di server Windows, jalankan **CONFIGURE_FRONTEND.cmd** setelah pull perubahan, lalu restart backend. Launcher menambahkan origin tanpa menghapus konfigurasi lain. Alternatif manual, ubah `.env` **di server backend**:
+
+```env
+ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000,https://activity-lab.tierkun.com
+```
+
+Ganti placeholder dengan origin frontend yang sebenarnya, tanpa path atau trailing slash. Restart backend. Domain preview Vercel berbeda juga memerlukan izin origin sendiri; wildcard tidak dipakai. Health API yang berhasil dibuka langsung bukan bukti CORS frontend sudah benar.
+
+Commit/push perubahan, import repository di Vercel, pilih Root Directory `web`, lalu deploy. Backend tetap berjalan pada server Python/GPU; tidak dipindah ke fungsi Vercel. Tambahkan origin Vercel yang tepat ke `ALLOWED_ORIGINS`. Jangan menggunakan localhost pada build frontend publik: localhost menunjuk perangkat pengunjung. Backend HTTP juga akan diblokir mixed content bila frontend HTTPS.
 
 ## Operasi
 

@@ -54,7 +54,11 @@ def check():
             ".log",
         }:
             problems.append(f"Runtime artifact in source: {rel}")
-        if p.name.startswith(".env") and p.name != ".env.example":
+        if (
+            p.name.startswith(".env")
+            and p.name != ".env.example"
+            and rel.as_posix() != "web/.env.production"
+        ):
             problems.append(f"Environment secret file: {rel}")
         if (
             p.suffix

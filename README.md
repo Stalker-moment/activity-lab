@@ -99,6 +99,10 @@ Installer memasang uv/Python 3.12 bila belum ada, membuat `.venv-backend-cpu`, m
 
 Profil ini untuk CPU i7/16 GB: satu worker, default `MAX_INFLIGHT=1`. Tidak memasang frontend, tidak membuka firewall, tidak mengatur domain/HTTPS, dan tidak mendaftarkan service autostart. Untuk instalasi tanpa langsung menjalankan backend: `INSTALL_BACKEND.cmd --install-only` atau `bash install_backend.sh --install-only`. [Panduan lengkap](docs/ONE_CLICK_BACKEND.md).
 
+## Deployment frontend Vercel
+
+Pilih **Root Directory: `web`** dan Framework **Next.js**. URL API produksi sudah diisi pada `web/.env.production`: `https://activity-lab-api.tierkun.my.id`. Domain frontend yang direncanakan: `https://activity-lab.tierkun.com`. Setelah pull di server backend, jalankan `CONFIGURE_FRONTEND.cmd` dan restart backend agar CORS mengizinkan domain tersebut. Tambahkan domain pada dashboard Vercel dan ikuti petunjuk DNS-nya. [Panduan deployment](docs/DEPLOYMENT.md).
+
 ## Mulai cepat
 
 **Prasyarat:** Python 3.12, Node.js 22 atau 24 LTS, npm, dan ruang disk untuk dependencies/checkpoint. GPU NVIDIA disarankan; CPU didukung tetapi kinerjanya perlu diukur pada perangkat tujuan. Video action membutuhkan model X-CLIP sekitar 780 MB. Tidak ada API berbayar.

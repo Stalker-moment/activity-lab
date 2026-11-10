@@ -31,3 +31,4 @@ notebooks/research/pilot/
 notebooks/research/results/
 **/.ipynb_checkpoints/
 .venv-backend-cpu/
+!web/.env.production
