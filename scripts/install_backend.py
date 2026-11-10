@@ -37,8 +37,17 @@ def installation_steps(uv):
                 python,
                 "-r",
                 str(ROOT / "requirements.txt"),
+                "--excludes",
+                str(ROOT / "requirements-exclude.txt"),
             ],
-            [uv, "pip", "check", "--python", python],
+            [
+                python,
+                str(ROOT / "scripts/repair_opencv.py"),
+                "--uv",
+                uv,
+                "--python",
+                python,
+            ],
             [
                 python,
                 str(ROOT / "scripts/import_ann.py"),
@@ -153,6 +162,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--install-only", action="store_true")
     parser.add_argument("--start-only", action="store_true")
+    parser.add_argument("--repair-opencv", action="store_true")
     args = parser.parse_args()
     if args.start_only:
         return start_backend()
@@ -160,6 +170,14 @@ def main():
         raise RuntimeError(
             "uv not found. Use INSTALL_BACKEND.cmd or install_backend.sh."
         )
+    if args.repair_opencv:
+        from repair_opencv import repair
+
+        if not python_path().exists():
+            raise RuntimeError("Run INSTALL_BACKEND first.")
+        repair(args.uv, str(python_path()))
+        print("Repair complete. Run START_BACKEND.cmd / bash start_backend.sh.")
+        return
     steps = installation_steps(args.uv)
     if args.dry_run:
         print(

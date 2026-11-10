@@ -5,7 +5,7 @@ Pengujian lokal pada 10 November 2026: Windows, Python 3.12.14, RTX 5070 Laptop 
 | Pemeriksaan | Hasil |
 |---|---|
 | Next.js production build + TypeScript | Lolos; `/` dan `/live` dibangun |
-| Unit/API/installer tests | 13 tes lolos; termasuk konfigurasi dan rencana instalasi CPU |
+| Unit/API/installer tests | 16 tes lolos; termasuk installer CPU dan substitusi provider OpenCV |
 | X-CLIP cache parity | Selisih maksimum logit **0.0** terhadap full forward pada 32 frame sintetis, 3 prompt, CUDA FP16 |
 | Cache warm/cold | Output identik pada sampel parity |
 | Checkpoint ANN | Keempat SHA-256 cocok manifest asli |
@@ -34,3 +34,5 @@ Satu pengukuran server menghasilkan 438,2 ms untuk body/X-CLIP dan 59,1 ms untuk
 3. Untuk fall/eye indicators, uji event positif dan aktivitas biasa yang mirip; ukur sensitivitas, false alarms per jam, dan detection delay. Hindari adegan jatuh sungguhan yang membahayakan subjek.
 4. Uji lost target, perubahan model/toggle, koneksi lambat, timeout, 429, server restart dan webcam permission denial.
 5. Jalankan container di staging, pasang HTTPS dan gateway auth, ukur p50/p95, concurrency, VRAM dan memory leak. Baru tetapkan kapasitas/SLO dari pengukuran tersebut.
+
+Perbaikan OpenCV diuji dalam environment terpisah berisi wheel base + contrib: keduanya dihapus, contrib 4.12 dipasang ulang, import dan cvtColor lolos. Server Windows pengguna belum diuji ulang setelah patch ini.

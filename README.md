@@ -79,6 +79,10 @@ Mode otomatis memprioritaskan tangan yang mendominasi frame, tubuh lengkap, waja
 
 Kamera baru aktif setelah tombol Mulai dan izin browser. Tidak ada audio yang diminta. Default pemrosesan lokal; saat menggunakan server remote, frame dikirim ke server tersebut. Backend tidak menyimpan frame. Riwayat JSON hanya berisi ringkasan hasil, bukan landmark lengkap atau gambar.
 
+## Perbaikan error OpenCV pada Windows
+
+Jika muncul `cv2 ... gapi_wip_gst_GStreamerPipeline`, gunakan [`REPAIR_OPENCV.cmd`](REPAIR_OPENCV.cmd) setelah memperbarui repository. Script membersihkan varian OpenCV yang saling menimpa, memasang ulang hanya contrib 4.12, lalu menguji import dan dependency. Setelah selesai jalankan `START_BACKEND.cmd`; tidak perlu mengunduh ulang model.
+
 ## Installer backend sekali jalan (CPU)
 
 **Windows:** klik dua kali [`INSTALL_BACKEND.cmd`](INSTALL_BACKEND.cmd). Setelah instalasi pertama, gunakan [`START_BACKEND.cmd`](START_BACKEND.cmd).
@@ -107,7 +111,9 @@ python -m venv .venv
 python -m pip install --upgrade pip
 # CPU; untuk NVIDIA lihat docs/DEPLOYMENT.md
 pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cpu
-pip install -r requirements.txt
+pip install uv
+uv pip install --python .venv -r requirements.txt --excludes requirements-exclude.txt
+python scripts/check_dependencies.py
 Copy-Item .env.example .env
 ```
 
@@ -147,7 +153,7 @@ Buka `http://127.0.0.1:3000` → **Live Studio** → pilih model → Mulai kamer
 ## Pengujian & kualitas
 
 ```sh
-pip install -r requirements-dev.txt
+uv pip install --python .venv -r requirements-dev.txt --excludes requirements-exclude.txt
 python -m unittest discover -s tests -v
 python tests/check_xclip_parity.py  # membutuhkan checkpoint; CPU/GPU
 cd web

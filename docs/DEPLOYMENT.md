@@ -34,7 +34,9 @@ Pasang driver NVIDIA yang mendukung runtime pilihan. Untuk stack laptop yang tel
 
 ```sh
 pip install torch==2.11.0 torchvision==0.26.0 --index-url https://download.pytorch.org/whl/cu128
-pip install -r requirements.txt
+pip install uv
+uv pip install --python .venv -r requirements.txt --excludes requirements-exclude.txt
+python scripts/check_dependencies.py
 ```
 
 `requirements.windows.lock.txt` adalah snapshot environment Windows yang telah dipakai, termasuk paket transitif dan suffix CUDA. Jangan menganggapnya lock lintas OS; requirements utama memisahkan instalasi torch berdasarkan perangkat. CPU menggunakan FP32; GPU X-CLIP memakai FP16. `DEVICE=cpu` menyembunyikan CUDA sebelum impor torch agar Keras dan komponen lain juga menggunakan CPU. Gunakan wheel CPU pada host tanpa GPU untuk mengurangi ukuran instalasi.

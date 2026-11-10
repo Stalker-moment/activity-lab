@@ -1,0 +1,5 @@
+# Ultralytics requests the base wheel by name, but contrib provides the same cv2 API.
+# Never install both wheels into one environment.
+opencv-python
+opencv-python-headless
+opencv-contrib-python-headless

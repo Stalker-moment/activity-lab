@@ -55,3 +55,11 @@ Sumber bootstrap resmi: [uv installation](https://docs.astral.sh/uv/getting-star
 ## Bukti pengujian paket
 
 Logika installer diuji dengan unit test: config lama dipertahankan, default CPU/loopback, rencana dependency CPU, impor ANN, serta environment tidak dibuat ulang. Dry-run Python dan validasi sintaks dijalankan. Instalasi penuh pada server i7 gen 7/16 GB belum diuji; tidak ada klaim latensi/kapasitas server sebelum pengukuran aktual.
+
+## Error cv2 / GStreamerPipeline
+
+MediaPipe meminta opencv-contrib-python sedangkan Ultralytics meminta opencv-python. Keduanya memakai namespace cv2; memasang versi berbeda dapat mencampur wrapper Python dan binary. Installer kini mengecualikan wheel base/headless dan memakai contrib sebagai penyedia API OpenCV.
+
+Pada Windows, setelah update repository, klik `REPAIR_OPENCV.cmd`, lalu `START_BACKEND.cmd`. Linux: `bash install_backend.sh --repair-opencv`, lalu `bash start_backend.sh`. Model dan konfigurasi tidak dihapus.
+
+Pemeriksaan memakai `scripts/check_dependencies.py`: seluruh dependency diperiksa, dengan substitusi khusus opencv-python → opencv-contrib-python. `uv pip check` biasa dapat melaporkan nama opencv-python tidak terpasang walaupun API cv2 tersedia melalui contrib; jangan memperbaikinya dengan memasang varian kedua. Sumber: https://pypi.org/project/opencv-python/.

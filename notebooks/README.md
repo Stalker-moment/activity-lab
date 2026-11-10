@@ -3,7 +3,8 @@
 Jalankan notebook terpisah dari backend website agar proses training tidak berebut RAM/VRAM. Notebook lokal/research mempertahankan pemeriksaan CUDA dari eksperimen asal; dukungan CPU backend tidak berarti notebook training sudah dioptimalkan untuk CPU.
 
 ```sh
-pip install -r requirements-training.txt
+pip install uv
+uv pip install --python .venv -r requirements-training.txt --excludes requirements-exclude.txt
 cd notebooks
 jupyter lab
 ```
