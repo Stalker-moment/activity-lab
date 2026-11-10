@@ -1,5 +1,9 @@
 # Deployment
 
+## Installer backend CPU
+
+Gunakan `INSTALL_BACKEND.cmd` pada Windows atau `bash install_backend.sh` pada Linux. Installer mengatur environment CPU terpisah dan menjalankan backend di terminal, bukan service production/autostart. Lihat [panduan one-click](ONE_CLICK_BACKEND.md).
+
 ## Profil yang tersedia
 
 | Profil | Frontend | Backend | Status |

@@ -5,7 +5,7 @@ Pengujian lokal pada 10 November 2026: Windows, Python 3.12.14, RTX 5070 Laptop 
 | Pemeriksaan | Hasil |
 |---|---|
 | Next.js production build + TypeScript | Lolos; `/` dan `/live` dibangun |
-| Unit/API tests | 9 tes lolos |
+| Unit/API/installer tests | 13 tes lolos; termasuk konfigurasi dan rencana instalasi CPU |
 | X-CLIP cache parity | Selisih maksimum logit **0.0** terhadap full forward pada 32 frame sintetis, 3 prompt, CUDA FP16 |
 | Cache warm/cold | Output identik pada sampel parity |
 | Checkpoint ANN | Keempat SHA-256 cocok manifest asli |

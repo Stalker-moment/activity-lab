@@ -79,6 +79,22 @@ Mode otomatis memprioritaskan tangan yang mendominasi frame, tubuh lengkap, waja
 
 Kamera baru aktif setelah tombol Mulai dan izin browser. Tidak ada audio yang diminta. Default pemrosesan lokal; saat menggunakan server remote, frame dikirim ke server tersebut. Backend tidak menyimpan frame. Riwayat JSON hanya berisi ringkasan hasil, bukan landmark lengkap atau gambar.
 
+## Installer backend sekali jalan (CPU)
+
+**Windows:** klik dua kali [`INSTALL_BACKEND.cmd`](INSTALL_BACKEND.cmd). Setelah instalasi pertama, gunakan [`START_BACKEND.cmd`](START_BACKEND.cmd).
+
+**Linux Ubuntu/Debian:** dari terminal dalam folder repository:
+
+```sh
+bash install_backend.sh
+# Jalankan lagi setelah instalasi selesai / server dihentikan:
+bash start_backend.sh
+```
+
+Installer memasang uv/Python 3.12 bila belum ada, membuat `.venv-backend-cpu`, memasang torch CPU + dependency, memverifikasi/mengimpor ANN bawaan, mengunduh model hybrid, membuat `.env` hanya jika belum ada, lalu menjalankan backend dan menunggu status model siap. `Ctrl+C` menghentikan backend. Pertama kali membutuhkan Internet dan unduhan dependencies/model; Linux mungkin meminta sudo untuk library sistem.
+
+Profil ini untuk CPU i7/16 GB: satu worker, default `MAX_INFLIGHT=1`. Tidak memasang frontend, tidak membuka firewall, tidak mengatur domain/HTTPS, dan tidak mendaftarkan service autostart. Untuk instalasi tanpa langsung menjalankan backend: `INSTALL_BACKEND.cmd --install-only` atau `bash install_backend.sh --install-only`. [Panduan lengkap](docs/ONE_CLICK_BACKEND.md).
+
 ## Mulai cepat
 
 **Prasyarat:** Python 3.12, Node.js 22 atau 24 LTS, npm, dan ruang disk untuk dependencies/checkpoint. GPU NVIDIA disarankan; CPU didukung tetapi kinerjanya perlu diukur pada perangkat tujuan. Video action membutuhkan model X-CLIP sekitar 780 MB. Tidak ada API berbayar.
