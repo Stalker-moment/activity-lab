@@ -12,6 +12,7 @@ import {
   Camera,
   Layers3,
   ShieldCheck,
+  GraduationCap,
 } from "lucide-react";
 import { SiteHeader, SiteFooter, VisionGraphic } from "./components";
 const features = [
@@ -98,6 +99,10 @@ export default function Landing() {
               <span>
                 <ShieldCheck size={13} />
                 Backend lokal atau privat
+              </span>
+              <span>
+                <GraduationCap size={13} />
+                Mahasiswa Teknik Elektro UNS
               </span>
             </div>
           </div>
@@ -348,6 +353,55 @@ export default function Landing() {
               blendshape bawaan, dan pengenalan aksi bergantung pada kandidat
               serta kualitas video. Mimik bukan diagnosis emosi.
             </p>
+          </div>
+        </section>
+        <section className="credits-section" id="team">
+          <div className="section-intro">
+            <div className="section-eyebrow">KREDIT PROYEK & TIM PENGEMBANG</div>
+            <h2>
+              Dibuat oleh Mahasiswa
+              <br />
+              <span>Teknik Elektro UNS</span>
+            </h2>
+            <p>
+              Proyek Activity Lab dikembangkan sebagai implementasi AI & Computer Vision
+              oleh mahasiswa Program Studi Teknik Elektro, Universitas Sebelas Maret (UNS).
+            </p>
+          </div>
+          <div className="credits-grid">
+            <div className="credit-card">
+              <div className="credit-badge">01</div>
+              <div className="credit-avatar">
+                <GraduationCap size={24} />
+              </div>
+              <h3>Muhammad Sahrul Nabawi</h3>
+              <p className="credit-nim">NIM: 21113032610045</p>
+              <span className="credit-role">
+                Mahasiswa Teknik Elektro · Universitas Sebelas Maret
+              </span>
+            </div>
+            <div className="credit-card">
+              <div className="credit-badge">02</div>
+              <div className="credit-avatar">
+                <GraduationCap size={24} />
+              </div>
+              <h3>Muhammad Singgih</h3>
+              <p className="credit-nim">NIM: 21113032610046</p>
+              <span className="credit-role">
+                Mahasiswa Teknik Elektro · Universitas Sebelas Maret
+              </span>
+            </div>
+            <div className="credit-card">
+              <div className="credit-badge">03</div>
+              <div className="credit-avatar">
+                <GraduationCap size={24} />
+              </div>
+              <h3>Muhammad Tier Sinyo Cahyo Utomo Suharjo</h3>
+              <p className="credit-nim">NIM: 21113032610047</p>
+              <span className="credit-role">
+                Mahasiswa Teknik Elektro · Universitas Sebelas Maret
+              </span>
+            </div>
           </div>
         </section>
         <section className="landing-cta">

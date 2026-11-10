@@ -2,6 +2,11 @@
 
 **Satu kamera. Dua pendekatan AI. Konteks yang beradaptasi.**
 
+> **Proyek ini dibuat oleh Mahasiswa Teknik Elektro Universitas Sebelas Maret (UNS):**
+> 1. **Muhammad Sahrul Nabawi** (21113032610045)
+> 2. **Muhammad Singgih** (21113032610046)
+> 3. **Muhammad Tier Sinyo Cahyo Utomo Suharjo** (21113032610047)
+
 Next.js + FastAPI untuk membandingkan classifier ANN hasil training dengan pipeline pralatih YOLO, Google MediaPipe, dan Microsoft X-CLIP. Dikemas sebagai satu repository yang dapat dipindahkan tanpa bergantung pada folder eksperimen awal.
 
 ![Activity Lab — arsitektur](docs/assets/architecture.svg)

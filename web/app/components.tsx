@@ -33,6 +33,9 @@ export function SiteHeader({ studio = false }: { studio?: boolean }) {
           <Link href="/#models" onClick={() => setOpen(false)}>
             Model
           </Link>
+          <Link href="/#team" onClick={() => setOpen(false)}>
+            Tim & Kredit
+          </Link>
           <Link
             href="/live"
             className={studio ? "nav-active" : ""}
@@ -74,6 +77,7 @@ export function SiteFooter() {
         <span>JELAJAHI</span>
         <Link href="/live">Live Studio</Link>
         <Link href="/#models">Model & batasan</Link>
+        <Link href="/#team">Tim Pengembang</Link>
       </div>
       <div>
         <span>TEKNOLOGI</span>
@@ -99,8 +103,27 @@ export function SiteFooter() {
           Microsoft X-CLIP ↗
         </a>
       </div>
+      <div>
+        <span>TIM PENGEMBANG</span>
+        <div className="footer-credits">
+          <p className="footer-credit-school">Mahasiswa Teknik Elektro UNS</p>
+          <ol>
+            <li>
+              Muhammad Sahrul Nabawi <span>(21113032610045)</span>
+            </li>
+            <li>
+              Muhammad Singgih <span>(21113032610046)</span>
+            </li>
+            <li>
+              Muhammad Tier Sinyo C.U.S. <span>(21113032610047)</span>
+            </li>
+          </ol>
+        </div>
+      </div>
       <div className="footer-bottom">
-        <span>Activity Lab · Proyek Pengantar Teknologi Informasi</span>
+        <span>
+          Activity Lab · Dibuat oleh Mahasiswa Teknik Elektro Universitas Sebelas Maret (UNS)
+        </span>
         <span>Tidak berafiliasi dengan penyedia model.</span>
       </div>
     </footer>
